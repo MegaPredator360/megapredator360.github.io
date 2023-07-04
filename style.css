@@ -1,0 +1,156 @@
+/* Globals */
+* {
+    padding: 0px;
+    margin: 0;
+}
+
+/* Modificaciones Bootstrap 5 */
+.container {
+    height: 100%;
+    font-size: 100px;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+/* Puntos de navegacion laterales */
+.scroll-control {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.scroll-control span {
+    cursor: pointer;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 10px 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+}
+
+.scroll-control span:hover {
+    opacity: 1;
+}
+
+@media all and (max-width: 1023px) {    /* Desaparecerá en dispositivos moviles */
+    .scroll-control span {
+        display: none;
+    }
+}
+
+/* Secciones del Scrollify */
+.s-one {
+    color: rgb(255, 255, 255);
+    background-color: rgb(170, 24, 24);
+}
+
+.s-two {
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 170, 24);
+}
+
+.s-three {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 58, 170);
+}
+
+.s-four {
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 39, 117);
+}
+
+
+/* Navigation Bar */
+.topbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 10%;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.topbar li {
+    float: left;
+}
+  
+.topbar li button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #333;
+    border: none;
+}
+  
+.topbar li button:hover {
+    background-color: #111;
+}
+
+/* SideBar - Mobiles Devices */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 40px; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/* Backgrounds */ 
+
+.aboutMe {
+    background-color: #8bffaf;
+    background-image: linear-gradient(45deg, #8bffaf 0%, #2BD2FF 44%, #3a50f9 100%);
+}

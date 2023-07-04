@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"> <!-- Archivo de CSS -->
+    <title>Aaron Alfaro Zamora</title> <!-- Titulo de la pagina -->
+    <!-- Importacion del css de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Barra de Navegacion -->
+    <ul class="topbar">
+        <li><button class="one" id="topBarOp1">Home</button></li>
+        <li><button class="two" id="topBarOp2">About</button></li>
+        <li><button class="three" id="topBarOp3">Projects</button></li>
+        <li><button class="four" id="topBarOp4">Contact</button></li>
+        <li><button id="topBarOp5" value="false" onclick="openSideNav()">Menu</button></li>
+    </ul>
+    <!-- Barra de Navegacion - Dispositivos Moviles -->
+    <div id="mySidenav" class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <!-- Puntos de navegacion laterales -->
+    <div class="scroll-control">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+    </div>
+    <div id="content">
+        <!-- Seccion 1 - Inicio -->
+        <section class="scroll s-one" data-section-name="s-one">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Section One</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion 2 - Acerca De -->
+        <section class="scroll s-two" data-section-name="s-two">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Section Two</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion 3 - Projectos -->
+        <section class="scroll s-three" data-section-name="s-three">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Section Three</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion 4 - Contactos -->
+        <section class="scroll s-four" data-section-name="s-four">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Section Four</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<!-- Archivo de JavaScript -->
+<script type="text/javascript" src="./script.js"></script>
+<!-- Importacion del archivo JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- Scrollify -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+    integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
