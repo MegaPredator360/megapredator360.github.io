@@ -86,7 +86,7 @@
   
 .topbar li button, 
 .topbar li a {
-    color: white;
+    color: white !important;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -105,8 +105,7 @@
 .topbar li button:hover {
     background-color: #111;
 }
-  
-/* .topbar li a:hover, */
+
 .topbar li a:active
 {
     background-color: #111;
@@ -131,24 +130,15 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #818181 !important;
     display: block;
     transition: 0.3s;
 }
   
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:active {
-    color: #f1f1f1;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:active {
+    color: #f1f1f1 !important;
     transition: 0.3s;
-}
-  
-  /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
   
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */

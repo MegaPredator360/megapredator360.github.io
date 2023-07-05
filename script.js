@@ -89,11 +89,14 @@ function openSideNav() {
         {
             document.getElementById("sideNavMobile").style.width = "450px";
             document.getElementById("BtnOpenSideNav").value = "true";
+            // Prevenirá la pantalla de moverse si el menú esta abierto
+            document.body.style.overflow = "hidden";
         }
         else
         {
             document.getElementById("sideNavMobile").style.width = "250px";
             document.getElementById("BtnOpenSideNav").value = "true";
+            document.body.style.overflow = "hidden";
         }
         
     }
@@ -101,6 +104,7 @@ function openSideNav() {
     {
         document.getElementById("sideNavMobile").style.width = "0";
         document.getElementById("BtnOpenSideNav").value = "false";
+        document.body.style.overflow = "visible";
     }
     else
     {
@@ -108,11 +112,13 @@ function openSideNav() {
         {
             document.getElementById("sideNavMobile").style.width = "450px";
             document.getElementById("BtnOpenSideNav").value = "true";
+            document.body.style.overflow = "hidden";
         }
         else
         {
             document.getElementById("sideNavMobile").style.width = "250px";
             document.getElementById("BtnOpenSideNav").value = "true";
+            document.body.style.overflow = "hidden";
         }
     }
 }
@@ -125,5 +131,6 @@ document.onclick = function(e)
     {
         document.getElementById("sideNavMobile").style.width = "0";
         document.getElementById("BtnOpenSideNav").value = "false";
+        document.body.style.overflowY = "visible";
     }
 }
