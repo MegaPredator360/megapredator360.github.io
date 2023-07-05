@@ -103,7 +103,7 @@
 .topbar li a:active
 {
     background-color: #111;
-	transition: 0.1s;
+	transition: 0.3s;
 }
 
 /* SideBar - Mobiles Devices */
@@ -133,7 +133,7 @@
   /* When you mouse over the navigation links, change their color */
   .sidenav a:active {
     color: #f1f1f1;
-    transition: 0.1s;
+    transition: 0.3s;
 }
   
   /* Position and style the close button (top right corner) */
@@ -158,13 +158,28 @@
 }
 
 /* Font size changes */ 
-@media (orientation:portrait) {
+@media (orientation: portrait) {
     .topbar li a {
         font-size: 80px;
     }
 
     .sidenav a {
         font-size: 80px;
+    }
+
+    .sidenav {
+        top: 148px;
+    }
+}
+
+/* Font size changes */ 
+@media (orientation: landscape) {
+    .topbar li a {
+        font-size: 40px;
+    }
+
+    .sidenav a {
+        font-size: 40px;
     }
 
     .sidenav {
