@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {       // Cuando la pagina 
 // Verificar resolucion de pantalla
 function screenCheck() {
     var deviceAgent = navigator.userAgent.toLowerCase();
-    var agentID = deviceAgent.match(/(iphone|ipod|pad)/);   // Identificador de dispositivos
+    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);   // Identificador de dispositivos
 
     if (agentID || $(window).width() <= 1023)
     {
@@ -97,14 +97,22 @@ onresize = (event) => {
 function openSideNav() {
     if (document.getElementById("topBarOp5").value == "false")
     {
-        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySidenav").style.width = "450px";
         //document.getElementById("content").style.opacity = "0.8";
         document.getElementById("topBarOp5").value = "true";
     }
-    else
+    else if (document.getElementById("topBarOp5").value == "true")
     {
         document.getElementById("mySidenav").style.width = "0";
         //document.getElementById("content").style.opacity = "1";
         document.getElementById("topBarOp5").value = "false";
     }
+    else
+    {
+        document.getElementById("mySidenav").style.width = "450px";
+        //document.getElementById("content").style.opacity = "0.8";
+        document.getElementById("topBarOp5").value = "true";
+    }
 }
+
+// Redirigir en la barra de navegacion lateral
