@@ -93,10 +93,36 @@
     background-color: #333;
     border: none;
 }
-  
+
 .topbar li button:hover {
     background-color: #111;
 }
+
+.topbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #333;
+    border: none;
+}
+  
+.topbar li a:hover {
+    background-color: #111;
+}
+
+@media screen and (min-width: 601px) {
+    .topbar li a {
+      font-size: 80px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    a.topbar {
+      font-size: 30px;
+    }
+  }
 
 /* SideBar - Mobiles Devices */
 .sidenav {
