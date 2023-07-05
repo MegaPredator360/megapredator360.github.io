@@ -63,13 +63,6 @@ function screenCheck() {
         // Es un dispositivo movil
         $.scrollify.destroy();
         $('section').removeClass('scroll').removeAttr('style');
-
-        // Activar Opciones de Top Bar
-        document.getElementById("topBarOp1").style.display = "none";
-        document.getElementById("topBarOp2").style.display = "none";
-        document.getElementById("topBarOp3").style.display = "none";
-        document.getElementById("topBarOp4").style.display = "none";
-        document.getElementById("topBarOp5").style.display = "block";
     }
     else
     {
@@ -77,13 +70,6 @@ function screenCheck() {
         $('section').addClass('scroll');
         applyScroll();
         $.scrollify.enable();
-
-        // Activar Opciones de Top Bar
-        document.getElementById("topBarOp1").style.display = "block";
-        document.getElementById("topBarOp2").style.display = "block";
-        document.getElementById("topBarOp3").style.display = "block";
-        document.getElementById("topBarOp4").style.display = "block";
-        document.getElementById("topBarOp5").style.display = "none";
     }
 }
 
@@ -95,24 +81,49 @@ onresize = (event) => {
 // Barra lateral de navegacion -  Dispositivos Mobiles
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openSideNav() {
-    if (document.getElementById("topBarOp5").value == "false")
+    const portrait = window.matchMedia("(orientation: portrait)").matches;
+
+    if (document.getElementById("BtnOpenSideNav").value == "false")
     {
-        document.getElementById("mySidenav").style.width = "450px";
-        //document.getElementById("content").style.opacity = "0.8";
-        document.getElementById("topBarOp5").value = "true";
+        if (portrait == true)
+        {
+            document.getElementById("sideNavMobile").style.width = "450px";
+            document.getElementById("BtnOpenSideNav").value = "true";
+        }
+        else
+        {
+            document.getElementById("sideNavMobile").style.width = "250px";
+            document.getElementById("BtnOpenSideNav").value = "true";
+        }
+        
     }
-    else if (document.getElementById("topBarOp5").value == "true")
+    else if (document.getElementById("BtnOpenSideNav").value == "true")
     {
-        document.getElementById("mySidenav").style.width = "0";
-        //document.getElementById("content").style.opacity = "1";
-        document.getElementById("topBarOp5").value = "false";
+        document.getElementById("sideNavMobile").style.width = "0";
+        document.getElementById("BtnOpenSideNav").value = "false";
     }
     else
     {
-        document.getElementById("mySidenav").style.width = "450px";
-        //document.getElementById("content").style.opacity = "0.8";
-        document.getElementById("topBarOp5").value = "true";
+        if (portrait == true)
+        {
+            document.getElementById("sideNavMobile").style.width = "450px";
+            document.getElementById("BtnOpenSideNav").value = "true";
+        }
+        else
+        {
+            document.getElementById("sideNavMobile").style.width = "250px";
+            document.getElementById("BtnOpenSideNav").value = "true";
+        }
     }
 }
 
-// Redirigir en la barra de navegacion lateral
+// Cerrar barra lateral si se toca fuera del area
+document.onclick = function(e)
+{
+    // Si el usuario hace click fuera del algunos de esos marcos
+    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav')
+    {
+        document.getElementById("sideNavMobile").style.width = "0";
+        document.getElementById("BtnOpenSideNav").value = "false";
+    }
+}

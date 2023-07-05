@@ -10,20 +10,22 @@
 </head>
 <body>
     <!-- Barra de Navegacion -->
-    <ul class="topbar">
-        <li><button class="one" id="topBarOp1">Home</button></li>
-        <li><button class="two" id="topBarOp2">About</button></li>
-        <li><button class="three" id="topBarOp3">Projects</button></li>
-        <li><button class="four" id="topBarOp4">Contact</button></li>
-        <li><a id="topBarOp5" href="#" onclick="openSideNav()">Menu</a></li>
+    <ul id="topBar" class="topbar">
+        <li><button class="one">Home</button></li>
+        <li><button class="two">About</button></li>
+        <li><button class="three">Projects</button></li>
+        <li><button class="four">Contact</button></li>
+        <li><a id="BtnOpenSideNav" href="#" onclick="openSideNav()">Menu</a></li>
     </ul>
+
     <!-- Barra de Navegacion - Dispositivos Moviles -->
-    <div id="mySidenav" class="sidenav" style="width: 0px;">
+    <div id="sideNavMobile" class="sidenav" style="width: 0px;">
         <a href="#" onclick="openSideNav()">Home</a>
         <a href="#" onclick="openSideNav()">About</a>
         <a href="#" onclick="openSideNav()">Projects</a>
         <a href="#" onclick="openSideNav()">Contact</a>
     </div>
+    
     <!-- Puntos de navegacion laterales -->
     <div class="scroll-control">
         <span class="one"></span>
