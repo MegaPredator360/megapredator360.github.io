@@ -49,7 +49,8 @@
 /* Secciones del Scrollify */
 .s-one {
     color: rgb(255, 255, 255);
-    background-color: rgb(170, 24, 24);
+    background-image: url(./images/index_bg.jpg);
+    /*background-color: rgb(170, 24, 24);*/
 }
 
 .s-two {
@@ -71,13 +72,17 @@
 /* Navigation Bar */
 .topbar {
     list-style-type: none;
-    margin: 0;
-    padding: 0px 10%;
+    margin-left: 10%;
     overflow: hidden;
-    background-color: #333;
+    background: rgba(255, 255, 255, 0.2);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 80%;
+    border-bottom: solid rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
   
 .topbar li {
@@ -85,13 +90,18 @@
 }
   
 .topbar li button, 
-.topbar li a {
-    color: white !important;
+.topbar li a,
+.sidenav a {
+    color: rgb(0, 0, 0) !important;
     text-align: center;
-    padding: 14px 16px;
+    margin: 6px 6px;
+    padding: 10px 10px;
     text-decoration: none;
-    background-color: #333;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
     border: none;
+    border-bottom: solid rgb(184, 178, 178);
+    border-radius: 10px;
 }
 
 .topbar li button {
@@ -99,29 +109,35 @@
 }
 
 .topbar li a {
+    padding: 10px 25px 10px 25px;
     display: none;
 }
 
 .topbar li button:hover {
-    background-color: #111;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(210,210,210,1) 100%);
+    border-bottom: solid rgb(139, 138, 138);
 }
 
 .topbar li a:active
 {
-    background-color: #111;
+    background: rgb(238,238,238);
+    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(210,210,210,1) 100%);
+    border-bottom: solid rgb(139, 138, 138);
 	transition: 0.3s;
 }
 
 /* SideBar - Mobiles Devices */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    left: 0;
-    background-color: #111; /* Black*/
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 15px;
+    border-top: solid rgba(255, 255, 255, 0.301);
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    padding-top: 25px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
   }
   
@@ -130,7 +146,6 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181 !important;
     display: block;
     transition: 0.3s;
 }
@@ -166,15 +181,20 @@
 
 @media (orientation: portrait) {
     .topbar li a {
-        font-size: 80px;
+        font-size: 70px;
+        margin-top: 15px;
+        margin-bottom: 15px
     }
 
     .sidenav a {
-        font-size: 80px;
+        font-size: 70px;
+        margin: 0 15px 15px 15px;
     }
 
     .sidenav {
-        top: 148px;
+        top: 165px;
+        width: 450px;
+        left: -450px;
     }
 }
 
@@ -185,9 +205,12 @@
 
     .sidenav a {
         font-size: 30px;
+        margin: 0 15px 15px 15px;
     }
 
     .sidenav {
-        top: 73px;
+        top: 90px;
+        width: 250px;
+        left: -250px;
     }
 }
