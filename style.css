@@ -48,9 +48,37 @@
 
 /* Secciones del Scrollify */
 .s-one {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     background-image: url(./images/index_bg.jpg);
-    /*background-color: rgb(170, 24, 24);*/
+}
+
+.homeIntro {
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(184,202,205,1) 100%);
+    border: solid rgb(135, 160, 165);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-width: 1px 1px 4px 1px;
+}
+
+hr.solid {
+    color: rgb(5, 24, 196);
+    border-width: 3px;
+    margin-top: 13px;
+    width: 80%;
+}
+
+.homeIcono {
+    color: rgb(119, 129, 180);
+    font-size: 35px !important;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.titulos {
+    font-size: 45px !important;
 }
 
 .s-two {
@@ -78,7 +106,8 @@
     position: fixed;
     top: 0;
     width: 80%;
-    border-bottom: solid rgba(255, 255, 255, 0.3);
+    border: solid rgba(255, 255, 255, 0.3);
+    border-width: 0 1px 3px 1px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     backdrop-filter: blur(5px);
@@ -139,6 +168,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 25px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    left: -450px;
   }
   
 /* The navigation menu links */
@@ -176,41 +206,46 @@
     
     .topbar li a {
         display: block;
-    } 
-}
-
-@media (orientation: portrait) {
-    .topbar li a {
-        font-size: 70px;
-        margin-top: 15px;
-        margin-bottom: 15px
     }
 
-    .sidenav a {
-        font-size: 70px;
-        margin: 0 15px 15px 15px;
-    }
+    @media (orientation: portrait) {
+        .topbar li a {
+            font-size: 70px;
+            margin-top: 15px;
+            margin-bottom: 15px
+        }
+    
+        .sidenav a {
+            font-size: 70px;
+            margin: 0 15px 15px 15px;
+        }
+    
+        .sidenav {
+            top: 165px;
+            width: 450px;
+            left: -450px;
+        }
 
-    .sidenav {
-        top: 165px;
-        width: 450px;
-        left: -450px;
+        .homeIntro {
+            margin-top: 250px !important;
+            margin-bottom: 250px !important;
+        }
     }
-}
-
-@media (orientation: landscape) {
-    .topbar li a {
-        font-size: 30px;
-    }
-
-    .sidenav a {
-        font-size: 30px;
-        margin: 0 15px 15px 15px;
-    }
-
-    .sidenav {
-        top: 90px;
-        width: 250px;
-        left: -250px;
+    
+    @media (orientation: landscape) {
+        .topbar li a {
+            font-size: 30px;
+        }
+    
+        .sidenav a {
+            font-size: 30px;
+            margin: 0 15px 15px 15px;
+        }
+    
+        .sidenav {
+            top: 90px;
+            width: 250px;
+            left: -250px;
+        }
     }
 }
