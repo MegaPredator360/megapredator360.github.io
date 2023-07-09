@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css"> <!-- Archivo de CSS -->
     <title>Aaron Alfaro Zamora</title> <!-- Titulo de la pagina -->
@@ -8,25 +9,33 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Awesome Fonts Icons -->
     <script src="https://kit.fontawesome.com/da93d5ab42.js" crossorigin="anonymous"></script>
+    
+    <!-- Importacion del archivo JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Scrollify -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
+        integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <!-- Barra de Navegacion -->
     <ul id="topBar" class="topbar">
-        <li><button class="one"><i class="fa-solid fa-house"></i> Home</button></li>
-        <li><button class="two"><i class="fa-regular fa-address-card"></i> About</button></li>
-        <li><button class="three"><i class="fa-solid fa-list-check"></i> Projects</button></li>
-        <li><button class="four"><i class="fa-regular fa-address-book"></i> Contact</button></li>
-        <li><a id="BtnOpenSideNav" onclick="openSideNav()"><i class="fa-solid fa-bars"></i> Menu</a></li>
+        <li><button class="one _lang" name="_home"></button></li>
+        <li><button class="two _lang" name="_about"></button></li>
+        <li><button class="three _lang" name="_project"></button></li>
+        <li><button class="four _lang" name="_contact"></button></li>
+        <li><a id="BtnOpenSideNav" onclick="openSideNav()" class="_lang" name="_menu"></a></li>
     </ul>
 
     <!-- Barra de Navegacion - Dispositivos Moviles -->
     <div id="sideNavMobile" class="sidenav" style="margin-left: 0px;">
-        <a onclick="openSideNav()"><i class="fa-solid fa-house"></i> Home</a>
-        <a onclick="openSideNav()"><i class="fa-regular fa-address-card"></i> About</a>
-        <a onclick="openSideNav()"><i class="fa-solid fa-list-check"></i>  Projects</a>
-        <a onclick="openSideNav()"><i class="fa-regular fa-address-book"></i> Contact</a>
+        <a onclick="openSideNav()" class="_lang" name="_home"></a>
+        <a onclick="openSideNav()" class="_lang" name="_about"></a>
+        <a onclick="openSideNav()" class="_lang" name="_project"></a>
+        <a onclick="openSideNav()" class="_lang" name="_contact"></a>
     </div>
-    
+
     <!-- Puntos de navegacion laterales -->
     <div class="scroll-control">
         <span class="one"></span>
@@ -46,7 +55,7 @@
                             <i class="fa-solid fa-laptop-code homeIcono"></i>
                             <hr class="solid" style="margin-right: 10%;">
                         </div>
-                        <p class="titulos">Fullstack Developer</p>
+                        <p class="titulos _lang" name="_homeTitle"></p>
                     </div>
                 </div>
             </div>
@@ -85,11 +94,4 @@
 </body>
 <!-- Archivo de JavaScript -->
 <script type="text/javascript" src="./script.js"></script>
-<!-- Importacion del archivo JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<!-- Scrollify -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"
-    integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 </html>

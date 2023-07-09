@@ -50,12 +50,11 @@
 .s-one {
     color: rgb(0, 0, 0);
     background-image: url(./images/index_bg.jpg);
+    background-position: center;
 }
 
 .homeIntro {
     border-radius: 15px;
-    margin-top: 0px;
-    margin-bottom: 0px;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(184,202,205,1) 100%);
     border: solid rgb(135, 160, 165);
@@ -126,11 +125,11 @@ hr.solid {
     margin: 6px 6px;
     padding: 10px 10px;
     text-decoration: none;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+    background-color: white;
     border: none;
     border-bottom: solid rgb(184, 178, 178);
     border-radius: 10px;
+    transition: 0.3s;
 }
 
 .topbar li button {
@@ -143,17 +142,16 @@ hr.solid {
 }
 
 .topbar li button:hover {
-    background: rgb(238,238,238);
-    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(210,210,210,1) 100%);
+    background-color: rgb(204, 204, 204);
     border-bottom: solid rgb(139, 138, 138);
+    transition: 0.3s;
 }
 
 .topbar li a:active
 {
-    background: rgb(238,238,238);
-    background: linear-gradient(90deg, rgba(238,238,238,1) 0%, rgba(210,210,210,1) 100%);
+    background-color: rgb(204, 204, 204);
     border-bottom: solid rgb(139, 138, 138);
-	transition: 0.3s;
+    transition: 0.3s;
 }
 
 /* SideBar - Mobiles Devices */
@@ -164,7 +162,8 @@ hr.solid {
     backdrop-filter: blur(5px);
     background: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 15px;
-    border-top: solid rgba(255, 255, 255, 0.301);
+    border: solid rgba(255, 255, 255, 0.301);
+    border-width: 3px 3px 0 0;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 25px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -173,7 +172,6 @@ hr.solid {
   
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     display: block;
@@ -226,9 +224,9 @@ hr.solid {
             left: -450px;
         }
 
-        .homeIntro {
-            margin-top: 250px !important;
-            margin-bottom: 250px !important;
+        .s-one {
+            height: 100vh;
+            background-size: auto 100%;
         }
     }
     
@@ -246,6 +244,10 @@ hr.solid {
             top: 90px;
             width: 250px;
             left: -250px;
+        }
+
+        .s-one {
+            height: 100vh;
         }
     }
 }

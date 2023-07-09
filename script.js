@@ -19,36 +19,36 @@ document.addEventListener("DOMContentLoaded", () => {       // Cuando la pagina 
     screenCheck();
 
     // Barra de navegacion superior
-    $('.topbar .one').click(function() {
+    $('.topbar .one').click(function () {
         $.scrollify.move('#s-one');
     });
 
-    $('.topbar .two').click(function() {
+    $('.topbar .two').click(function () {
         $.scrollify.move('#s-two');
     });
 
-    $('.topbar .three').click(function() {
+    $('.topbar .three').click(function () {
         $.scrollify.move('#s-three');
     });
 
-    $('.topbar .four').click(function() {
+    $('.topbar .four').click(function () {
         $.scrollify.move('#s-four');
     });
 
     // Barra de navegacion lateral
-    $('.scroll-control .one').click(function() {
+    $('.scroll-control .one').click(function () {
         $.scrollify.move('#s-one');
     });
 
-    $('.scroll-control .two').click(function() {
+    $('.scroll-control .two').click(function () {
         $.scrollify.move('#s-two');
     });
 
-    $('.scroll-control .three').click(function() {
+    $('.scroll-control .three').click(function () {
         $.scrollify.move('#s-three');
     });
 
-    $('.scroll-control .four').click(function() {
+    $('.scroll-control .four').click(function () {
         $.scrollify.move('#s-four');
     });
 });
@@ -58,14 +58,12 @@ function screenCheck() {
     var deviceAgent = navigator.userAgent.toLowerCase();
     var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);   // Identificador de dispositivos
 
-    if (agentID || $(window).width() <= 1023)
-    {
+    if (agentID || $(window).width() <= 1023) {
         // Es un dispositivo movil
         $.scrollify.destroy();
         $('section').removeClass('scroll').removeAttr('style');
     }
-    else
-    {
+    else {
         // Es una computadora de escritorio
         $('section').addClass('scroll');
         applyScroll();
@@ -84,39 +82,32 @@ onresize = (event) => {
 function openSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
 
-    if (document.getElementById("BtnOpenSideNav").value == "false")
-    {
-        if (portrait == true)
-        {
+    if (document.getElementById("BtnOpenSideNav").value == "false") {
+        if (portrait == true) {
             document.getElementById("sideNavMobile").style.marginLeft = "450px";
             document.getElementById("BtnOpenSideNav").value = "true";
             // Prevenirá la pantalla de moverse si el menú esta abierto
             document.body.style.overflow = "hidden";
         }
-        else
-        {
+        else {
             document.getElementById("sideNavMobile").style.marginLeft = "250px";
             document.getElementById("BtnOpenSideNav").value = "true";
             document.body.style.overflow = "hidden";
         }
-        
+
     }
-    else if (document.getElementById("BtnOpenSideNav").value == "true")
-    {
+    else if (document.getElementById("BtnOpenSideNav").value == "true") {
         document.getElementById("sideNavMobile").style.marginLeft = "0px";
         document.getElementById("BtnOpenSideNav").value = "false";
         document.body.style.overflow = "visible";
     }
-    else
-    {
-        if (portrait == true)
-        {
+    else {
+        if (portrait == true) {
             document.getElementById("sideNavMobile").style.marginLeft = "450px";
             document.getElementById("BtnOpenSideNav").value = "true";
             document.body.style.overflow = "hidden";
         }
-        else
-        {
+        else {
             document.getElementById("sideNavMobile").style.marginLeft = "250px";
             document.getElementById("BtnOpenSideNav").value = "true";
             document.body.style.overflow = "hidden";
@@ -125,11 +116,9 @@ function openSideNav() {
 }
 
 // Cerrar barra lateral si se toca fuera del area
-document.onclick = function(e)
-{
+document.onclick = function (e) {
     // Si el usuario hace click fuera del algunos de esos marcos
-    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav')
-    {
+    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav') {
         document.getElementById("sideNavMobile").style.marginLeft = "0px";;
         document.getElementById("BtnOpenSideNav").value = "false";
         document.body.style.overflowY = "visible";
@@ -140,15 +129,64 @@ document.onclick = function(e)
 function readjustSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
 
-    if (document.getElementById("BtnOpenSideNav").value == "true")
-    {
-        if (portrait == true)
-        {
+    if (document.getElementById("BtnOpenSideNav").value == "true") {
+        if (portrait == true) {
             document.getElementById("sideNavMobile").style.marginLeft = "450px";
         }
-        else
-        {
+        else {
             document.getElementById("sideNavMobile").style.marginLeft = "250px";
         }
     }
 }
+
+// Detectar Idioma
+if (localStorage.getItem('language') == null || localStorage.getItem('language') == undefined) {
+    var lng = window.navigator.userLanguage || window.navigator.language;
+    localStorage.setItem('language', lng);
+}
+
+var lang = localStorage.getItem('language');
+if (lang == "es-ES") {
+    var elements = document.getElementsByClassName("_lang");
+    fetch('./languages/es-es.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].textContent = data[elements[i].name];
+            }
+        })
+        .catch(function (error) {
+            console.log('Hubo un error al cargar el archivo JSON:', error);
+        });
+}
+else {
+    lang = "en-US";
+    localStorage.setItem('language', lang);
+
+    var elements = document.getElementsByClassName("_lang");
+    fetch('./languages/en-us.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            // Almacena los datos en una variable
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].textContent = data[elements[i].getAttribute("name")];
+            }
+        })
+        .catch(function (error) {
+            console.log('Hubo un error al cargar el archivo JSON:', error);
+        });
+}
+
+
+// Cambiará el idioma del la pagina
+function changeLang() {
+    var lang = $(this).attr("id");
+
+    $(".lang").each(function (index, element) {
+        $(this).text(arrLang[lang][$(this).attr("key")]);
+    });
+};
