@@ -142,36 +142,23 @@ function readjustSideNav() {
 // Detectar Idioma
 if (localStorage.getItem('language') == null || localStorage.getItem('language') == undefined) {
     var lng = window.navigator.userLanguage || window.navigator.language;
+    console.log(lng);
     localStorage.setItem('language', lng);
 }
-
+// Se obtendrá el valor del idioma almacenado en memoria
 var lang = localStorage.getItem('language');
-if (lang == "es-ES") {
+
+if (
+    (lang.charAt(0) == 'e' && lang.charAt(1) == 's') ||
+    (lang.charAt(0) == 'E' && lang.charAt(1) == 'S')
+) {
     var elements = document.getElementsByClassName("_lang");
     fetch('./languages/es-es.json')
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            for (var i = 0; i < elements.length; i++) {
-                elements[i].textContent = data[elements[i].name];
-            }
-        })
-        .catch(function (error) {
-            console.log('Hubo un error al cargar el archivo JSON:', error);
-        });
-}
-else {
-    lang = "en-US";
-    localStorage.setItem('language', lang);
-
-    var elements = document.getElementsByClassName("_lang");
-    fetch('./languages/en-us.json')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            // Almacena los datos en una variable
+            // Usamos los datos que provienen de "data" para el "for"
             for (var i = 0; i < elements.length; i++) {
                 elements[i].textContent = data[elements[i].getAttribute("name")];
             }
@@ -179,14 +166,78 @@ else {
         .catch(function (error) {
             console.log('Hubo un error al cargar el archivo JSON:', error);
         });
+
+    document.getElementById("_idioma").value = "_langEnglish";
+}
+else {
+    localStorage.setItem('language', "en");
+
+    var elements = document.getElementsByClassName("_lang");
+    fetch('./languages/en-us.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].textContent = data[elements[i].getAttribute("name")];
+            }
+        })
+        .catch(function (error) {
+            console.log('Hubo un error al cargar el archivo JSON:', error);
+        });
+
+        document.getElementById("_idioma").value = "_langSpanish";
 }
 
 
 // Cambiará el idioma del la pagina
 function changeLang() {
-    var lang = $(this).attr("id");
+    if (document.getElementById("_idioma").value == "_langEnglish")
+    {
+        localStorage.setItem('language', "en");
+        //location.reload();
 
-    $(".lang").each(function (index, element) {
-        $(this).text(arrLang[lang][$(this).attr("key")]);
-    });
-};
+        var elements = document.getElementsByClassName("_lang");
+        fetch('./languages/en-us.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].textContent = data[elements[i].getAttribute("name")];
+                }
+            })
+            .catch(function (error) {
+                console.log('Hubo un error al cargar el archivo JSON:', error);
+            });
+
+        document.getElementById("_idioma").value = "_langSpanish";
+    }
+    else
+    {
+        localStorage.setItem('language', "es");
+        //location.reload();
+
+        var elements = document.getElementsByClassName("_lang");
+        fetch('./languages/es-es.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // Usamos los datos que provienen de "data" para el "for"
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].textContent = data[elements[i].getAttribute("name")];
+                }
+            })
+            .catch(function (error) {
+                console.log('Hubo un error al cargar el archivo JSON:', error);
+            });
+
+        document.getElementById("_idioma").value = "_langEnglish";
+    }
+}
+
+// Cambiar a Modo Oscuro
+function toggleDarkMode() {
+    document.body.classList.toggle("darkMode");
+}

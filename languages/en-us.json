@@ -4,5 +4,8 @@
     "_project": "Projects",
     "_contact": "Contact",
     "_menu": "Menu",
+    "_darkMode": "Dark Mode",
+    "_lightMode": "Light Mode",
+    "_language": "Español",
     "_homeTitle": "Fullstack Developer"
 }

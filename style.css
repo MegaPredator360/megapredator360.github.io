@@ -62,13 +62,20 @@
     border-width: 1px 1px 4px 1px;
 }
 
-hr.solid {
-    color: rgb(5, 24, 196);
-    border-width: 3px;
+div.solid {
+    border: solid rgb(159, 173, 243);
+    background-color: rgb(159, 173, 243);
+    padding: 0;
+    max-height: 0px;
+    border-radius: 5px;
+    border-width: 2px;
     margin-top: 13px;
     width: 80%;
 }
 
+/* Menú desplegable */
+
+/* Secciones */
 .homeIcono {
     color: rgb(119, 129, 180);
     font-size: 35px !important;
@@ -196,7 +203,7 @@ hr.solid {
     background-image: linear-gradient(45deg, #8bffaf 0%, #2BD2FF 44%, #3a50f9 100%);
 }
 
-/* Font size changes */ 
+/* Cambios para dispositivos moviles */ 
 @media screen and (max-width: 1023px) {
     .topbar li button {
         display: none;
@@ -249,5 +256,34 @@ hr.solid {
         .s-one {
             height: 100vh;
         }
+    }
+}
+
+/* Modo Oscuro */
+.darkMode {
+    .topbar li button, 
+    .topbar li a,
+    .sidenav a {
+        color: rgb(255, 255, 255) !important;
+        background-color: rgb(23, 23, 23);
+        border-bottom: solid rgb(32, 33, 36);
+    }
+
+    .topbar li button:hover {
+        background-color: rgb(32, 33, 36);
+        border-bottom: solid rgb(48, 49, 52);
+    }
+    
+    .topbar li a:active
+    {
+        background-color: rgb(32, 33, 36);
+        border-bottom: solid rgb(48, 49, 52);
+    }
+
+    .topbar {
+        background: rgba(0, 0, 0, 0.2);
+        border: solid rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        border-width: 0 1px 3px 1px;
     }
 }
