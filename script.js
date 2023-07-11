@@ -118,10 +118,10 @@ function openSideNav() {
 // Cerrar barra lateral si se toca fuera del area
 document.onclick = function (e) {
     // Si el usuario hace click fuera del algunos de esos marcos
-    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav') {
+    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav' && e.target.id !== 'btnDarkMode' && e.target.id !== 'btnLanguage') {
         document.getElementById("sideNavMobile").style.marginLeft = "0px";;
         document.getElementById("BtnOpenSideNav").value = "false";
-        document.body.style.overflowY = "visible";
+        document.body.style.overflow = "visible";
     }
 }
 

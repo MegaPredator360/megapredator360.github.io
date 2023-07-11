@@ -51,6 +51,7 @@
     color: rgb(0, 0, 0);
     background-image: url(./images/index_bg.jpg);
     background-position: center;
+    transition: 0.3s;
 }
 
 .homeIntro {
@@ -62,7 +63,7 @@
     border-width: 1px 1px 4px 1px;
 }
 
-div.solid {
+.solidLine {
     border: solid rgb(159, 173, 243);
     background-color: rgb(159, 173, 243);
     padding: 0;
@@ -73,9 +74,6 @@ div.solid {
     width: 80%;
 }
 
-/* Menú desplegable */
-
-/* Secciones */
 .homeIcono {
     color: rgb(119, 129, 180);
     font-size: 35px !important;
@@ -261,6 +259,9 @@ div.solid {
 
 /* Modo Oscuro */
 .darkMode {
+    
+
+    /* Barra de navegacion */
     .topbar li button, 
     .topbar li a,
     .sidenav a {
@@ -285,5 +286,35 @@ div.solid {
         border: solid rgba(0, 0, 0, 0.3);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         border-width: 0 1px 3px 1px;
+    }
+
+    /* Sidenav */
+
+    .sidenav {
+        background: rgba(0, 0, 0, 0.2);
+        border: solid rgba(0, 0, 0, 0.3);
+    }
+
+    /* Secciones */
+
+    .s-one {
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+
+    .homeIntro {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(35, 38, 39) 100%);
+        border: solid rgb(57, 76, 78);
+        border-width: 1px 1px 4px 1px;
+    }
+
+    .solidLine {
+        border: solid rgb(54, 59, 82);
+        background-color: rgb(32, 35, 48);
+    }
+
+    .homeIcono {
+        color: rgb(84, 90, 122);
     }
 }
