@@ -81,37 +81,30 @@ onresize = (event) => {
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
+    const btnOpenSideNav = document.getElementById("BtnOpenSideNav");
 
-    if (document.getElementById("BtnOpenSideNav").value == "false") {
-        if (portrait == true) {
-            document.getElementById("sideNavMobile").style.marginLeft = "450px";
-            document.getElementById("BtnOpenSideNav").value = "true";
-            // Prevenirá la pantalla de moverse si el menú esta abierto
-            document.body.style.overflow = "hidden";
-        }
-        else {
-            document.getElementById("sideNavMobile").style.marginLeft = "250px";
-            document.getElementById("BtnOpenSideNav").value = "true";
-            document.body.style.overflow = "hidden";
+    if (btnOpenSideNav.getAttribute("data-value") === "false") {
+        if (portrait === true) {
+            sideNavMobile.style.marginLeft = "450px";
+            btnOpenSideNav.setAttribute("data-value", "true");
+        } else {
+            sideNavMobile.style.marginLeft = "250px";
+            btnOpenSideNav.setAttribute("data-value", "true");
         }
 
-    }
-    else if (document.getElementById("BtnOpenSideNav").value == "true") {
-        document.getElementById("sideNavMobile").style.marginLeft = "0px";
-        document.getElementById("BtnOpenSideNav").value = "false";
+        // Establecer la posición fija y la altura máxima para el desplazamiento
+        sideNavMobile.style.position = "fixed";
+        sideNavMobile.style.maxHeight = "100vh";
+        // Prevenir el desplazamiento del body
+        document.body.style.overflow = "hidden";
+    } else {
+        sideNavMobile.style.marginLeft = "0px";
+        btnOpenSideNav.setAttribute("data-value", "false");
+
+        // Restaurar el estilo del sideNavMobile y permitir el desplazamiento del body
+        sideNavMobile.style.position = "";
+        sideNavMobile.style.maxHeight = "";
         document.body.style.overflow = "visible";
-    }
-    else {
-        if (portrait == true) {
-            document.getElementById("sideNavMobile").style.marginLeft = "450px";
-            document.getElementById("BtnOpenSideNav").value = "true";
-            document.body.style.overflow = "hidden";
-        }
-        else {
-            document.getElementById("sideNavMobile").style.marginLeft = "250px";
-            document.getElementById("BtnOpenSideNav").value = "true";
-            document.body.style.overflow = "hidden";
-        }
     }
 }
 
@@ -120,7 +113,7 @@ document.onclick = function (e) {
     // Si el usuario hace click fuera del algunos de esos marcos
     if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav' && e.target.id !== 'btnDarkMode' && e.target.id !== 'btnLanguage') {
         document.getElementById("sideNavMobile").style.marginLeft = "0px";;
-        document.getElementById("BtnOpenSideNav").value = "false";
+        document.getElementById("BtnOpenSideNav").setAttribute("data-value", "false");
         document.body.style.overflow = "visible";
     }
 }
@@ -129,7 +122,7 @@ document.onclick = function (e) {
 function readjustSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
 
-    if (document.getElementById("BtnOpenSideNav").value == "true") {
+    if (document.getElementById("BtnOpenSideNav").getAttribute("data-value") === "true") {
         if (portrait == true) {
             document.getElementById("sideNavMobile").style.marginLeft = "450px";
         }

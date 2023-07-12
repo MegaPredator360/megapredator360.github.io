@@ -185,7 +185,8 @@
   
 /* When you mouse over the navigation links, change their color */
 .sidenav a:active {
-    color: #f1f1f1 !important;
+    background-color: rgb(204, 204, 204);
+    border-bottom: solid rgb(139, 138, 138);
     transition: 0.3s;
 }
   
@@ -293,6 +294,11 @@
     .sidenav {
         background: rgba(0, 0, 0, 0.2);
         border: solid rgba(0, 0, 0, 0.3);
+    }
+
+    .sidenav a:active {
+        background-color: rgb(32, 33, 36);
+        border-bottom: solid rgb(48, 49, 52);
     }
 
     /* Secciones */
