@@ -9,7 +9,6 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Awesome Fonts Icons -->
     <script src="https://kit.fontawesome.com/da93d5ab42.js" crossorigin="anonymous"></script>
-    
     <!-- Importacion del archivo JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Scrollify -->
@@ -25,8 +24,8 @@
         <li><button class="two _lang" name="_about"></button></li>
         <li><button class="three _lang" name="_project"></button></li>
         <li><button class="four _lang" name="_contact"></button></li>
-        <li class="floatRight"><button class="_lang" name="_darkMode" onclick="toggleDarkMode()"></button></li>
-        <li class="floatRight"><button class="_lang" name="_language" id="_idioma" onclick="changeLang()" value=""></button></li>
+        <li class="floatRight"><button class="_lang" id="btnDarkModeTop" onclick="toggleDarkMode()"></button></li>
+        <li class="floatRight"><button class="_lang" name="_language" id="_idioma" onclick="changeLang()"></button></li>
         <li><a id="BtnOpenSideNav" onclick="openSideNav()" class="_lang" name="_menu" data-value="false"></a></li>
     </ul>
 
@@ -38,7 +37,7 @@
         <a onclick="openSideNav()" class="_lang" name="_contact"></a>
         <div class="solidLine margin10p"></div>
         <a onclick="changeLang()" id="btnLanguage" class="_lang" name="_language"></a>
-        <a onclick="toggleDarkMode()" id="btnDarkMode" class="marginBottom100px _lang" name="_darkMode"></a>
+        <a onclick="toggleDarkMode()" id="btnDarkModeSide" class="marginBottom100px _lang"></a>
     </div>
 
     <!-- Puntos de navegacion laterales -->

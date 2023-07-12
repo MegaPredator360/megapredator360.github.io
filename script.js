@@ -111,8 +111,14 @@ function openSideNav() {
 
 // Cerrar barra lateral si se toca fuera del area
 document.onclick = function (e) {
+
     // Si el usuario hace click fuera del algunos de esos marcos
-    if (e.target.id !== 'sideNavMobile' && e.target.id !== 'topBar' && e.target.id !== 'BtnOpenSideNav' && e.target.id !== 'btnDarkMode' && e.target.id !== 'btnLanguage') {
+    if (e.target.id !== 'sideNavMobile' &&
+        e.target.id !== 'topBar' && 
+        e.target.id !== 'BtnOpenSideNav' &&
+        e.target.id !== 'btnDarkModeSide' &&
+        e.target.id !== 'btnLanguage'
+    ) {
         document.getElementById("sideNavMobile").style.marginLeft = "0px";;
         document.getElementById("BtnOpenSideNav").setAttribute("data-value", "false");
         document.body.style.overflow = "visible";
@@ -133,14 +139,82 @@ function readjustSideNav() {
     }
 }
 
-// Detectar Idioma
+// Obtendra el dato de modo oscuro en la memoria
+if (localStorage.getItem('darkMode') == null || localStorage.getItem('darkMode') == undefined)
+{
+    localStorage.setItem('darkMode', false);
+    document.getElementById("btnDarkModeTop").name = "_darkMode";
+}
+
+var darkMode = localStorage.getItem('darkMode');
+
+// Se obtendrá el valor del idioma almacenado en memoria
 if (localStorage.getItem('language') == null || localStorage.getItem('language') == undefined) {
     var lng = window.navigator.userLanguage || window.navigator.language;
     console.log(lng);
-    localStorage.setItem('language', lng);
 }
-// Se obtendrá el valor del idioma almacenado en memoria
+
 var lang = localStorage.getItem('language');
+
+// Cargar Modo Oscuro al inicio de la pagina
+if (darkMode == 'false')
+{
+    document.getElementById("btnDarkModeTop").name = "_darkMode";
+    document.getElementById("btnDarkModeSide").name = "_darkMode";
+}
+else
+{
+    document.body.classList.toggle("darkMode");
+    document.getElementById("btnDarkModeTop").name = "_lightMode";
+    document.getElementById("btnDarkModeSide").name = "_lightMode";
+}
+
+// Cambiar a Modo Oscuro
+function toggleDarkMode() {
+    lang = localStorage.getItem('language');
+    darkMode = localStorage.getItem('darkMode')
+
+    document.body.classList.toggle("darkMode");
+
+    if (darkMode == 'false')
+    {
+        localStorage.setItem('darkMode', true);
+        document.getElementById("btnDarkModeTop").name = "_lightMode";
+        document.getElementById("btnDarkModeSide").name = "_lightMode";
+
+        if (
+            (lang.charAt(0) == 'e' && lang.charAt(1) == 's') ||
+            (lang.charAt(0) == 'E' && lang.charAt(1) == 'S')
+        ) {
+            document.getElementById("btnDarkModeTop").textContent = "Modo Claro";
+            document.getElementById("btnDarkModeSide").textContent = "Modo Claro";
+        }
+        else
+        {
+            document.getElementById("btnDarkModeTop").textContent = "Light Mode";
+            document.getElementById("btnDarkModeSide").textContent = "Light Mode";
+        }
+    }
+    else
+    {
+        localStorage.setItem('darkMode', false);
+        document.getElementById("btnDarkModeTop").name = "_darkMode";
+        document.getElementById("btnDarkModeSide").name = "_darkMode";
+
+        if (
+            (lang.charAt(0) == 'e' && lang.charAt(1) == 's') ||
+            (lang.charAt(0) == 'E' && lang.charAt(1) == 'S')
+        ) {
+            document.getElementById("btnDarkModeTop").textContent = "Modo Oscuro";
+            document.getElementById("btnDarkModeSide").textContent = "Modo Oscuro";
+        }
+        else
+        {
+            document.getElementById("btnDarkModeTop").textContent = "Dark Mode";
+            document.getElementById("btnDarkModeSide").textContent = "Dark Mode";
+        }
+    }
+}
 
 if (
     (lang.charAt(0) == 'e' && lang.charAt(1) == 's') ||
@@ -189,7 +263,6 @@ function changeLang() {
     if (document.getElementById("_idioma").value == "_langEnglish")
     {
         localStorage.setItem('language', "en");
-        //location.reload();
 
         var elements = document.getElementsByClassName("_lang");
         fetch('./languages/en-us.json')
@@ -210,7 +283,6 @@ function changeLang() {
     else
     {
         localStorage.setItem('language', "es");
-        //location.reload();
 
         var elements = document.getElementsByClassName("_lang");
         fetch('./languages/es-es.json')
@@ -231,7 +303,4 @@ function changeLang() {
     }
 }
 
-// Cambiar a Modo Oscuro
-function toggleDarkMode() {
-    document.body.classList.toggle("darkMode");
-}
+
