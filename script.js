@@ -94,9 +94,10 @@ function openSideNav() {
 
         // Establecer la posición fija y la altura máxima para el desplazamiento
         sideNavMobile.style.position = "fixed";
-        sideNavMobile.style.maxHeight = "100vh";
+        sideNavMobile.style.maxHeight = "100%";
         // Prevenir el desplazamiento del body
         document.body.style.overflow = "hidden";
+        
     } else {
         sideNavMobile.style.marginLeft = "0px";
         btnOpenSideNav.setAttribute("data-value", "false");
