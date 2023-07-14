@@ -151,7 +151,7 @@ var darkMode = localStorage.getItem('darkMode');
 // Se obtendrá el valor del idioma almacenado en memoria
 if (localStorage.getItem('language') == null || localStorage.getItem('language') == undefined) {
     var lng = window.navigator.userLanguage || window.navigator.language;
-    console.log(lng);
+    localStorage.setItem('language', lng);
 }
 
 var lang = localStorage.getItem('language');
