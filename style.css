@@ -85,9 +85,27 @@
     font-size: 45px !important;
 }
 
+/* Sección 2 */
 .s-two {
     color: rgb(255, 255, 255);
     background-color: rgb(48, 170, 24);
+}
+
+.acercaDeDisplay {
+    display: flex;
+}
+
+.acercaDeIzquierda {
+    border: solid 2px; 
+    width: 50%; 
+    margin: 2%; 
+    padding: 2%;
+}
+
+.acercaDeDerecha {
+    border: solid 2px; 
+    width: 50%; 
+    margin: 2%;
 }
 
 .s-three {
@@ -237,6 +255,18 @@
             height: 100vh;
             background-size: auto 100%;
         }
+
+        .acercaDeDisplay {
+            display: block;
+        }
+
+        .acercaDeIzquierda {
+            width: 100%;
+        }
+
+        .acercaDeDerecha {
+            width: 100%; 
+        }
     }
     
     @media (orientation: landscape) {
@@ -257,6 +287,18 @@
 
         .s-one {
             height: 100vh;
+        }
+
+        .acercaDeDisplay {
+            display: block;
+        }
+
+        .acercaDeIzquierda {
+            width: 100%;
+        }
+
+        .acercaDeDerecha {
+            width: 100%; 
         }
     }
 }
