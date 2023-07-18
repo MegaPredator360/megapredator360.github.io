@@ -1,1 +1,1 @@
-Este es le repositorio de mi pagina web personal
+Este es el repositorio de mi pagina web personal
