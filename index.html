@@ -26,8 +26,8 @@
         <li><button class="two _lang" name="_about"></button></li>
         <li><button class="three _lang" name="_project"></button></li>
         <li><button class="four _lang" name="_contact"></button></li>
-        <li class="floatRight"><button class="_lang" id="btnDarkModeTop" onclick="toggleDarkMode()"></button></li>
-        <li class="floatRight"><button class="_lang" name="_language" id="_idioma" onclick="changeLang()"></button></li>
+        <li class="float-end"><button class="_lang" id="btnDarkModeTop" onclick="toggleDarkMode()"></button></li>
+        <li class="float-end"><button class="_lang" name="_language" id="_idioma" onclick="changeLang()"></button></li>
         <li><a id="BtnOpenSideNav" onclick="openSideNav()" class="_lang" name="_menu" data-value="false"></a></li>
     </ul>
 
@@ -37,9 +37,9 @@
         <a onclick="openSideNav()" class="_lang" name="_about"></a>
         <a onclick="openSideNav()" class="_lang" name="_project"></a>
         <a onclick="openSideNav()" class="_lang" name="_contact"></a>
-        <div class="solidLine margin10p"></div>
+        <div class="solidLine m-5"></div>
         <a onclick="changeLang()" id="btnLanguage" class="_lang" name="_language"></a>
-        <a onclick="toggleDarkMode()" id="btnDarkModeSide" class="marginBottom100px _lang"></a>
+        <a onclick="toggleDarkMode()" id="btnDarkModeSide" class="_lang"></a>
     </div>
 
     <!-- Puntos de navegacion laterales -->
@@ -56,10 +56,10 @@
                 <div class="row">
                     <div class="col-lg-12 homeIntro">
                         <p class="titulos">Aaron Steve Alfaro Zamora</p>
-                        <div class="displayFlex">
-                            <div class="solidLine marginLeft10p"></div>
+                        <div class="d-flex">
+                            <div class="solidLine ms-5"></div>
                             <i class="fa-solid fa-laptop-code homeIcono"></i>
-                            <div class="solidLine marginRight10p"></div>
+                            <div class="solidLine me-5"></div>
                         </div>
                         <p class="titulos _lang" name="_homeTitle"></p>
                     </div>
@@ -73,16 +73,18 @@
                     <div class="col-lg-12">
                         <p class="titulos">Acerca de mí</p>
                         <div class="acercaDeDisplay">
-                            <div class="acercaDeIzquierda"></div>
+                            <div class="acercaDeIzquierda">
+                                <p class="subtitulos m-0">Introducción</p>
+                            </div>
                             <div class="acercaDeDerecha">
-                                <div class="skillsLanguages marginBottom2p">
-                                    <p class="subtitulos noMargin">Habilidades</p>
-                                    <div class="solidLine marginLeft10p"></div>
+                                <div class="skillsLanguages mb-3">
+                                    <p class="subtitulos m-0">Habilidades</p>
+                                    <div class="solidLine mx-auto"></div>
                                 </div>
-                                <div class="skillsLanguages marginTop2p">
+                                <div class="skillsLanguages">
                                     <ul class="texto">
-                                        <p class="texto noMargin fw-bold">Lenguajes</p>
-                                        <div class="solidLine marginLeft10p marginRight10p my-2"></div>
+                                        <p class="texto m-0 fw-bold">Lenguajes</p>
+                                        <div class="solidLine mx-5 my-2"></div>
                                         <li class="d-flex justify-content-center">
                                             <div class="d-flex small">
                                                 <i class="languajeIcon devicon-html5-plain me-2"></i>HTML
@@ -133,8 +135,8 @@
                                                 <i class="languajeIcon fa-solid fa-database me-2"></i>SQL
                                             </div>
                                         </li>
-                                        <p class="marginTop2p noMarginBottom fw-bold">JavaScript Frameworks</p>
-                                        <div class="solidLine marginLeft10p marginRight10p my-2"></div>
+                                        <p class="mb-0 fw-bold">JavaScript Frameworks</p>
+                                        <div class="solidLine mx-5 my-2"></div>
                                         <li class="d-flex justify-content-center">
                                             <div class="d-flex small">
                                                 <i class="languajeIcon devicon-angularjs-plain me-2"></i>Angular
@@ -150,8 +152,8 @@
                                                 <i class="languajeIcon fa-brands fa-vuejs me-2"></i>Vue
                                             </div>
                                         </li>
-                                        <p class="marginTop2p noMarginBottom fw-bold">Virtual Infrastructure</p>
-                                        <div class="solidLine marginLeft10p marginRight10p my-2"></div>
+                                        <p class="mb-0 fw-bold">Virtual Infrastructure</p>
+                                        <div class="solidLine mx-5 my-2"></div>
                                         <li class="d-flex justify-content-center">
                                             <div class="d-flex small">
                                                 Virtual Box
