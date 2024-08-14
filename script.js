@@ -6,7 +6,7 @@ function applyScroll() {
         //standardScrollElements: 'section',  // Desactivar autoredireccionamiento
         easing: 'easeOutExpo',
         scrollSpeed: 100,
-        offset: 0,
+        offset: 1,
         scrollbars: true,
         setHeights: true,
         overflowScroll: true,

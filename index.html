@@ -10,7 +10,7 @@
     <!-- Awesome Fonts Icons -->
     <script src="https://kit.fontawesome.com/da93d5ab42.js" crossorigin="anonymous"></script>
     <!-- Iconos de Lenguajes de programación -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <!-- Importacion del archivo JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- Scrollify -->
@@ -37,7 +37,7 @@
         <a onclick="openSideNav()" class="_lang" name="_about"></a>
         <a onclick="openSideNav()" class="_lang" name="_project"></a>
         <a onclick="openSideNav()" class="_lang" name="_contact"></a>
-        <div class="solidLine m-5"></div>
+        <div class="divider dividerColor m-5"></div>
         <a onclick="changeLang()" id="btnLanguage" class="_lang" name="_language"></a>
         <a onclick="toggleDarkMode()" id="btnDarkModeSide" class="_lang"></a>
     </div>
@@ -50,121 +50,111 @@
         <span class="four"></span>
     </div>
     <div id="content">
+
         <!-- Seccion 1 - Inicio -->
         <section class="scroll s-one" data-section-name="s-one">
-            <div class="container">
+            <div class="container vh-100">
                 <div class="row">
                     <div class="col-lg-12 homeIntro">
                         <p class="titulos">Aaron Steve Alfaro Zamora</p>
                         <div class="d-flex">
-                            <div class="solidLine ms-5"></div>
+                            <div class="divider dividerColor ms-5"></div>
                             <i class="fa-solid fa-laptop-code homeIcono"></i>
-                            <div class="solidLine me-5"></div>
+                            <div class="divider dividerColor me-5"></div>
                         </div>
                         <p class="titulos _lang" name="_homeTitle"></p>
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Seccion 2 - Acerca De -->
         <section class="scroll s-two" data-section-name="s-two">
-            <div class="container">
+            <div class="container min-vh-100">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p class="titulos">Acerca de mí</p>
+                        <p class="titulos" style="margin-top: 70px;">Acerca de mí</p>
                         <div class="acercaDeDisplay">
-                            <div class="acercaDeIzquierda">
-                                <p class="subtitulos m-0">Introducción</p>
+                            <div class="tarjeta w-50 mb-5 mt-3 me-2 px-5 py-3 d-flex justify-content-center flex-column">
+
+                                <!-- Introduccion -->
+                                <p class="subtitulos m-0 fw-bold">Introducción</p>
+                                <div class="divider dividerColor"></div>
+                                <p class="texto">
+                                    ¡Hola! Mi nombre es Aaron Steve Alfaro Zamora.
+                                </p>
+                                <p class="texto">
+                                    Soy un desarrollador Full-Stack apasionado por la programacion y desarrollado
+                                    de aplicaciones o automatizaciones.
+                                </p>
+                                <p class="texto">
+                                    Soy una persona que aprende rapido, y con experiencia en una variedad de tecnologias
+                                    y con interes en las más importantes innovaciones en el desarrollo de software
+                                </p>
+                                <p class="texto">
+                                    Yo disfruto buscando nuevos retos y oportunidades que me han ayudado a ser mejor;
+                                    esto a ayudado a formar mis habilidades como programador y me ha permitido
+                                    enfrentar diferentes problemas desarrollado soluciones a esos problemas.
+                                </p>
+                                <p class="texto">
+                                    Siempre estaré comprometido a utilizar mis habilidades para ayudar a otros,
+                                    mientras trabajo en cumplir la mision de la compañia.
+                                </p>
+
+                                <!-- Educación -->
+                                <p class="subtitulos m-0 fw-bold">Educación</p>
+                                <div class="divider dividerColor"></div>
+                                <p class="texto fw-bold mb-0">Universidad Latina de Costa Rica</p>
+                                <p class="texto mb-0">Bachillerato en Ingenieria en Sistemas Computacionales</p>
+                                <p class="texto">Mayo 2021 - Presente</p>
+
+                                <!-- Experiencia -->
+                                <p class="subtitulos m-0 fw-bold">Experiencia</p>
+                                <div class="divider dividerColor"></div>
+                                <p class="texto fw-bold mb-0">Robert Bosch Service Solutions</p>
+                                <p class="texto mb-0">Desarrollador de Software</p>
+                                <p class="texto">Noviembre 2023 - Agosto 2024</p>
                             </div>
-                            <div class="acercaDeDerecha">
-                                <div class="skillsLanguages mb-3">
-                                    <p class="subtitulos m-0">Habilidades</p>
-                                    <div class="solidLine mx-auto"></div>
-                                </div>
-                                <div class="skillsLanguages">
-                                    <ul class="texto">
-                                        <p class="texto m-0 fw-bold">Lenguajes</p>
-                                        <div class="solidLine mx-5 my-2"></div>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-html5-plain me-2"></i>HTML
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-css3-plain me-2"></i>CSS
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-javascript-plain me-2"></i>JavaScript
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-typescript-plain me-2"></i>TypeScript
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-php-plain me-2"></i>PHP
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-java-plain me-2"></i>Java
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-csharp-plain me-2"></i>C# .NET Framework
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-cplusplus-plain me-2"></i>C++
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-python-plain me-2"></i>Python
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon fa-solid fa-database me-2"></i>SQL
-                                            </div>
-                                        </li>
-                                        <p class="mb-0 fw-bold">JavaScript Frameworks</p>
-                                        <div class="solidLine mx-5 my-2"></div>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-angularjs-plain me-2"></i>Angular
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon devicon-react-original me-2"></i>React JS
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                <i class="languajeIcon fa-brands fa-vuejs me-2"></i>Vue
-                                            </div>
-                                        </li>
-                                        <p class="mb-0 fw-bold">Virtual Infrastructure</p>
-                                        <div class="solidLine mx-5 my-2"></div>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                Virtual Box
-                                            </div>
-                                        </li>
-                                        <li class="d-flex justify-content-center">
-                                            <div class="d-flex small">
-                                                VMware
-                                            </div>
-                                        </li>
-                                    </ul>
+                            <div class="tarjeta w-50 mt-3 mb-5 ms-2 py-3 d-flex justify-content-center flex-column">
+                                <div>
+                                    <p class="texto m-0 fw-bold">Lenguajes</p>
+                                    <div class="divider dividerColor w-50 mx-auto"></div>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-html5-plain me-2"></i>HTML</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-css3-plain me-2"></i>CSS</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-javascript-plain me-2"></i>JavaScript</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-typescript-plain me-2"></i>TypeScript</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-php-plain me-2"></i>PHP</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-java-plain me-2"></i>Java</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-csharp-plain me-2"></i>C#</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-cplusplus-plain me-2"></i>C++</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-python-plain me-2"></i>Python</p>
+
+                                    <p class="texto m-0 fw-bold mt-3">Frameworks de JavaScript</p>
+                                    <div class="divider dividerColor w-50 mx-auto"></div>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-nodejs-plain me-2"></i>Node JS</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-angularjs-plain me-2"></i>Angular</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-react-original me-2"></i>React</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-react-original me-2"></i>React Native</p>
+                                    <p class="texto mb-0"><i class="languajeIcon fa-brands fa-vuejs me-2"></i>Vue</p>
+
+                                    <p class="texto m-0 fw-bold mt-3">Infraestructura Virtual</p>
+                                    <div class="divider dividerColor w-50 mx-auto"></div>
+                                    <p class="texto mb-0"><img class="languajeIcon me-2" style="width: 30px;" src="./svgs/virtualbox-logo.svg" />Oracle Virtual Box</p>
+                                    <p class="texto mb-0"><img class="languajeIcon me-2" style="width: 30px;" src="./svgs/vmware.svg" />VMWare</p>
+
+                                    <p class="texto m-0 fw-bold mt-3">Otros Frameworks</p>
+                                    <div class="divider dividerColor w-50 mx-auto"></div>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-dotnetcore-plain me-2"></i>.NET Framework</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-django-plain me-2"></i>Django</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-laravel-plain me-2"></i>Laravel</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-flask-plain me-2"></i>Flask</p>
+
+                                    <p class="texto m-0 fw-bold mt-3">SQL</p>
+                                    <div class="divider dividerColor w-50 mx-auto"></div>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-microsoftsqlserver-plain me-2"></i>SQL Server</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-sqlite-plain me-2"></i>SQLite</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-mysql-original me-2"></i>MySQL</p>
+                                    <p class="texto mb-0"><i class="languajeIcon devicon-mongodb-plain me-2"></i>MongoDB</p>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +164,7 @@
         </section>
         <!-- Seccion 3 - Projectos -->
         <section class="scroll s-three" data-section-name="s-three">
-            <div class="container">
+            <div class="container h-100">
                 <div class="row">
                     <div class="col-lg-12">
                         <p>Section Three</p>
@@ -184,7 +174,7 @@
         </section>
         <!-- Seccion 4 - Contactos -->
         <section class="scroll s-four" data-section-name="s-four">
-            <div class="container">
+            <div class="container vh-100">
                 <div class="row">
                     <div class="col-lg-12">
                         <p>Section Four</p>
