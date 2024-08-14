@@ -1,58 +1,3 @@
-// Funciones para el scrollify
-function applyScroll() {
-    $.scrollify({
-        section: '.scroll',     // Nombre de la clase
-        sectionName: 'section-name',
-        //standardScrollElements: 'section',  // Desactivar autoredireccionamiento
-        easing: 'easeOutExpo',
-        scrollSpeed: 100,
-        offset: 1,
-        scrollbars: true,
-        setHeights: true,
-        overflowScroll: true,
-        updateHash: false,
-        touchScroll: true,
-    });
-}
-
-document.addEventListener("DOMContentLoaded", () => {       // Cuando la pagina termina termine de cargar
-    screenCheck();
-
-    // Barra de navegacion superior
-    $('.topbar .one').click(function () {
-        $.scrollify.move('#s-one');
-    });
-
-    $('.topbar .two').click(function () {
-        $.scrollify.move('#s-two');
-    });
-
-    $('.topbar .three').click(function () {
-        $.scrollify.move('#s-three');
-    });
-
-    $('.topbar .four').click(function () {
-        $.scrollify.move('#s-four');
-    });
-
-    // Barra de navegacion lateral
-    $('.scroll-control .one').click(function () {
-        $.scrollify.move('#s-one');
-    });
-
-    $('.scroll-control .two').click(function () {
-        $.scrollify.move('#s-two');
-    });
-
-    $('.scroll-control .three').click(function () {
-        $.scrollify.move('#s-three');
-    });
-
-    $('.scroll-control .four').click(function () {
-        $.scrollify.move('#s-four');
-    });
-});
-
 // Verificar resolucion de pantalla
 function screenCheck() {
     var deviceAgent = navigator.userAgent.toLowerCase();
@@ -60,14 +5,10 @@ function screenCheck() {
 
     if (agentID || $(window).width() <= 1023) {
         // Es un dispositivo movil
-        $.scrollify.destroy();
-        $('section').removeClass('scroll').removeAttr('style');
+
     }
     else {
         // Es una computadora de escritorio
-        $('section').addClass('scroll');
-        applyScroll();
-        $.scrollify.enable();
     }
 }
 
