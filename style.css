@@ -14,7 +14,7 @@
 
 .s-two {
     color: rgb(0, 0, 0);
-    border: solid rgb(168, 183, 185);
+    border-top: solid rgb(168, 183, 185);
     border-width: 1px 0px 0px 0px;
     background-color: rgb(238, 252, 255);
 }
@@ -29,6 +29,9 @@
     background-color: rgb(121, 39, 117);
 }
 
+svgIcon {
+    fill: #000000
+}
 
 .homeIntro {
     border-radius: 15px;
@@ -84,9 +87,6 @@
 .texto {
     font-size: 20px !important;
 }
-
-/* Sección 2 */
-
 
 .acercaDeDisplay {
     display: flex;
@@ -330,10 +330,30 @@
         transition: 0.3s;
     }
 
+    .s-two {
+        border-top: solid rgb(71, 77, 78);
+        background-color: rgb(47, 52, 53);
+        color: rgb(255, 255, 255);
+        transition: 0.3s;
+    }
+
+    .svgIcon {
+        fill: #FFFFFF;
+        transition: 0.3s;
+    }
+
     .homeIntro {
         background: rgb(0, 0, 0);
         background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(35, 38, 39) 100%);
         border: solid rgb(57, 76, 78);
+        border-width: 1px 1px 4px 1px;
+    }
+
+    .tarjeta {
+        border-radius: 15px;
+        background: rgb(43, 43, 43);
+        border: solid rgb(63, 63, 63);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         border-width: 1px 1px 4px 1px;
     }
 
