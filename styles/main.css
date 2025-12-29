@@ -1,0 +1,58 @@
+/* Globals */
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.acercaDeDisplay {
+    display: flex;
+}
+
+/* Backgrounds */
+.aboutMe {
+    background-color: #8bffaf;
+    background-image: linear-gradient(45deg, #8bffaf 0%, #2BD2FF 44%, #3a50f9 100%);
+}
+
+/* Cambios para dispositivos moviles */
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+    .topbar li a {
+        font-size: 70px;
+        margin-top: 15px;
+        margin-bottom: 15px
+    }
+
+    .acercaDeDisplay {
+        display: block;
+    }
+
+    .acercaDeIzquierda {
+        width: 100%;
+    }
+
+    .acercaDeDerecha {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+    .topbar li a {
+        font-size: 30px;
+    }
+
+    .acercaDeDisplay {
+        display: block;
+    }
+
+    .acercaDeIzquierda {
+        width: 100%;
+    }
+
+    .acercaDeDerecha {
+        width: 100%;
+    }
+}

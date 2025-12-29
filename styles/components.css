@@ -1,0 +1,76 @@
+/* Components */
+.svgIcon {
+    fill: #000000
+}
+
+.homeIntro {
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(184, 202, 205, 1) 100%);
+    border: solid rgb(135, 160, 165);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-width: 1px 1px 4px 1px;
+}
+
+.tarjeta {
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    border: solid rgb(168, 183, 185);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-width: 1px 1px 4px 1px;
+}
+
+.tarjeta ul {
+    list-style-type: none !important;
+    padding: 0 15% 0 15%;
+}
+
+.divider {
+    padding: 0;
+    max-height: 0px;
+    border-radius: 5px;
+    border-width: 2px;
+    margin: 13px 0;
+    width: 100%;
+}
+
+.dividerColor {
+    border: solid rgb(159, 173, 243);
+    background-color: rgb(159, 173, 243);
+}
+
+.homeIcono {
+    color: rgb(119, 129, 180);
+    font-size: 35px !important;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.darkMode .svgIcon {
+    fill: #FFFFFF;
+    transition: 0.3s;
+}
+
+.darkMode .homeIntro {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(35, 38, 39) 100%);
+    border: solid rgb(57, 76, 78);
+    border-width: 1px 1px 4px 1px;
+}
+
+.darkMode .tarjeta {
+    border-radius: 15px;
+    background: rgb(43, 43, 43);
+    border: solid rgb(63, 63, 63);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-width: 1px 1px 4px 1px;
+}
+
+.darkMode .dividerColor {
+    border: solid rgb(54, 59, 82);
+    background-color: rgb(32, 35, 48);
+}
+
+.darkMode .homeIcono {
+    color: rgb(84, 90, 122);
+}

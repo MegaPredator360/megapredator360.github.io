@@ -1,0 +1,60 @@
+/* Side navigation */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.2);
+    border-top-right-radius: 15px;
+    border: solid rgba(255, 255, 255, 0.301);
+    border-width: 3px 3px 0 0;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    overflow-y: scroll;
+    padding-top: 25px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    left: -450px;
+    margin-left: 0px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+    .sidenav a {
+        font-size: 70px;
+        margin: 0 15px 15px 15px;
+    }
+
+    .sidenav {
+        top: 165px;
+        width: 450px;
+        left: -450px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+    .sidenav a {
+        font-size: 30px;
+        margin: 0 15px 15px 15px;
+    }
+
+    .sidenav {
+        top: 90px;
+        width: 250px;
+        left: -250px;
+    }
+}
+
+.darkMode .sidenav {
+    background: rgba(0, 0, 0, 0.2);
+    border: solid rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,48 @@
+/* Top bar */
+.topbar {
+    list-style-type: none;
+    margin-left: 10%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 80%;
+    border: solid rgba(255, 255, 255, 0.3);
+    border-width: 0 1px 3px 1px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding-right: 2rem !important;
+}
+
+.topbar li {
+    float: left;
+}
+
+.topbar li button {
+    display: block;
+}
+
+.topbar li a {
+    padding: 10px 25px 10px 25px;
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .topbar li button {
+        display: none;
+    }
+
+    .topbar li a {
+        display: block;
+    }
+}
+
+.darkMode .topbar {
+    background: rgba(0, 0, 0, 0.2);
+    border: solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-width: 0 1px 3px 1px;
+}

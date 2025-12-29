@@ -1,0 +1,51 @@
+/* Sections */
+.s-one {
+    color: rgb(0, 0, 0);
+    background-image: url(../images/index_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+}
+
+.s-two {
+    color: rgb(0, 0, 0);
+    border-top: solid rgb(168, 183, 185);
+    border-width: 1px 0px 0px 0px;
+    background-color: rgb(238, 252, 255);
+}
+
+.s-three {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 58, 170);
+}
+
+.s-four {
+    color: rgb(255, 255, 255);
+    background-color: rgb(121, 39, 117);
+}
+
+@media screen and (max-width: 1023px) and (orientation: portrait) {
+    .s-one {
+        height: 100vh;
+        background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 1023px) and (orientation: landscape) {
+    .s-one {
+        height: 100vh;
+    }
+}
+
+.darkMode .s-one {
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
+
+.darkMode .s-two {
+    border-top: solid rgb(71, 77, 78);
+    background-color: rgb(47, 52, 53);
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+}
