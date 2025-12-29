@@ -13,11 +13,17 @@
     border-top: solid rgb(168, 183, 185);
     border-width: 1px 0px 0px 0px;
     background-color: rgb(238, 252, 255);
+    background-image: url("../images/about-bg-light.svg");
+    background-size: cover;
+    background-position: center;
 }
 
 .s-three {
     color: rgb(255, 255, 255);
     background-color: rgb(24, 58, 170);
+    background-image: url("../images/projects-bg-light.svg");
+    background-size: cover;
+    background-position: center;
 }
 
 .s-four {
@@ -48,4 +54,9 @@
     background-color: rgb(47, 52, 53);
     color: rgb(255, 255, 255);
     transition: 0.3s;
+    background-image: url("../images/about-bg-dark.svg");
+}
+
+.darkMode .s-three {
+    background-image: url("../images/projects-bg-dark.svg");
 }
