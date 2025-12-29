@@ -74,3 +74,14 @@
 .darkMode .homeIcono {
     color: rgb(84, 90, 122);
 }
+
+@media screen and (max-width: 1023px) {
+    .homeIcono {
+        font-size: 24px !important;
+    }
+
+    .divider {
+        border-width: 1px;
+        margin: 10px 0;
+    }
+}

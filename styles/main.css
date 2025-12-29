@@ -30,6 +30,20 @@
         display: block;
     }
 
+    .s-two .acercaDeDisplay .tarjeta {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .s-two .acercaDeDisplay .tarjeta:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .s-two {
+        padding-bottom: 2rem;
+    }
+
     .acercaDeIzquierda {
         width: 100%;
     }
@@ -46,6 +60,20 @@
 
     .acercaDeDisplay {
         display: block;
+    }
+
+    .s-two .acercaDeDisplay .tarjeta {
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .s-two .acercaDeDisplay .tarjeta:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .s-two {
+        padding-bottom: 2rem;
     }
 
     .acercaDeIzquierda {
