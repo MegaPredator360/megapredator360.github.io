@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1023px) and (orientation: portrait) {
     .topbar li a {
-        font-size: 70px;
+        font-size: 28px;
         margin-top: 15px;
         margin-bottom: 15px
     }
@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 1023px) and (orientation: landscape) {
     .topbar li a {
-        font-size: 30px;
+        font-size: 22px;
     }
 
     .acercaDeDisplay {
