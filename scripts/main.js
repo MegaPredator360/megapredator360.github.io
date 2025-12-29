@@ -23,13 +23,14 @@ function openSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
     const btnOpenSideNav = document.getElementById("BtnOpenSideNav");
     const sideNavMobile = document.getElementById("sideNavMobile");
+    const sideNavWidth = sideNavMobile.offsetWidth;
 
     if (btnOpenSideNav.getAttribute("data-value") === "false") {
         if (portrait === true) {
-            sideNavMobile.style.marginLeft = "450px";
+            sideNavMobile.style.marginLeft = sideNavWidth + "px";
             btnOpenSideNav.setAttribute("data-value", "true");
         } else {
-            sideNavMobile.style.marginLeft = "250px";
+            sideNavMobile.style.marginLeft = sideNavWidth + "px";
             btnOpenSideNav.setAttribute("data-value", "true");
         }
 
@@ -99,17 +100,17 @@ document.onclick = function (e) {
 function readjustSideNav() {
     const portrait = window.matchMedia("(orientation: portrait)").matches;
     const sideNavMobile = document.getElementById("sideNavMobile");
+    const sideNavWidth = sideNavMobile.offsetWidth;
 
     if (document.getElementById("BtnOpenSideNav").getAttribute("data-value") === "true") {
         if (portrait == true) {
-            sideNavMobile.style.marginLeft = "450px";
+            sideNavMobile.style.marginLeft = sideNavWidth + "px";
         }
         else {
-            sideNavMobile.style.marginLeft = "250px";
+            sideNavMobile.style.marginLeft = sideNavWidth + "px";
         }
     }
 }
 
 wireNavButtons();
-
 
